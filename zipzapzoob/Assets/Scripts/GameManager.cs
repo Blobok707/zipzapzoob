@@ -29,4 +29,12 @@ public class GameManager : MonoBehaviour
     {
         return coinCount;
     }
+    public void OnPlayerDeath()
+    {
+    Debug.Log("Game Over!");
+    // Şimdilik sahneyi yeniden yükle (basit respawn)
+    UnityEngine.SceneManagement.SceneManager.LoadScene(
+        UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
+    );
+    }
 }
